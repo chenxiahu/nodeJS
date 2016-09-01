@@ -1,0 +1,29 @@
+1.模块
+在node.js中，一个模块其实就是一个js文件
+在node.js中，引入一个模块通过关键字require("模块名");//模块名就是js文件名
+2.全局对象 global中常用的变量
+__dirname:执行的js文件所在的绝对目录
+__filename：执行的js文件的绝对路径
+3.全局对象global中的常用对象:console process
+(1)console中常用的方法有：log() info() error() warn() time() timeEnd()
+log();打印日志
+info();打印信息
+error():打印错误
+warn()：打印警告
+统计一段代码的执行时间time() timeEnd()
+console.time("test");
+for(var i=0;i<100;i++){
+}
+console.timeEnd("test");
+(2)process存放程序执行的一些信息
+process.stdout/process.stderr:输出信息
+process:stdin:输入
+process.cmd();
+process.on();
+process.argy:运行时程序附加在命令中的参数
+
+4.require()方法 引入模块的
+它会自动缓存，即使一个模块被多次引用，也只会被加载一次
+在引用模块的时候，可以只写模块的名称，而不写.js，即可以使用绝对路径，也可以使用相对路径
+5.exports
+将当前模块中的变量或对象传递到模块外部
